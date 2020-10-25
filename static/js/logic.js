@@ -63,8 +63,7 @@ d3.csv("data/merged_house_data.csv").then(function(data) {
           fillColor: color,
           // Adjust radius
           radius: data[i].median * 0.003,
-        }).bindPopup("<h5>Zip Code: <b>" + data[i].RegionName +
-         "<h4>Median 2 Bedroom: $"+ data[i].median2 + "<h/4><h4>Median 3 Bedroom: $"+ data[i].median3 + "<h/4><h4>Median 4 Bedroom: $"+ data[i].median4 + "<h/4><h4>Median 5 Bedroom: $"+ data[i].median5 + "<h/3>").addTo(myMap2);
+        }).bindPopup("<h2>City: <b>" + data[i].City +"<b/><h/2><h4>Zip Code: <b>" + data[i].RegionName +"<b/><h/4><br><p>2 Bedroom: $"+ data[i].median2 + "<p>3 Bedroom: $"+ data[i].median3 + "<p>4 Bedroom: $"+ data[i].median4 + "<p>5 Bedroom: $"+ data[i].median5 + "<h/4>").addTo(myMap2);
       }
     });
 
