@@ -11,11 +11,16 @@ function unpack(rows, index) {
 
 d3.csv("data/merged_house_data2.csv").then(function (data) {
     var ids = unpack(data,"RegionName");
-    // console.log(ids);
+
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      } 
+      var unique = ids.filter(onlyUnique);
+
     // console.log(data);
     d3.select("#selDataset")
         .selectAll("select")
-        .data(ids)
+        .data(unique)
         .enter()
         .append("option")
         .html(function (d) {
