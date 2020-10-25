@@ -20,7 +20,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 
 // Import Data
-d3.csv("static/data/merged_house_data.csv").then(function(data) {
+d3.csv("data/merged_house_data.csv").then(function(data) {
 
   // convert strings to int
   data.forEach(function(data) {
